@@ -28,7 +28,7 @@ import org.kohsuke.stapler.QueryParameter;
 import org.kohsuke.stapler.Stapler;
 import org.kohsuke.stapler.StaplerRequest;
 
-import javax.annotation.CheckForNull;
+import edu.umd.cs.findbugs.annotations.CheckForNull;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -143,7 +143,7 @@ public class vSphereCloud extends Cloud {
     @Deprecated
     public vSphereCloud(String vsHost, String vsDescription,
                         String username, String password, int maxOnlineSlaves) {
-        this(null, vsDescription, maxOnlineSlaves, 0, false, null);
+        this(null, vsDescription, maxOnlineSlaves, 0, null);
     }
 
     @DataBoundConstructor
